@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.seats{ 
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, red, yellow) ;
+}
+
+.booking-mo{
+  width: 550px;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0px 25px 25px -12px rgba(0, 0, 0, 0.25);
+}
+
+.movie{
+  background: rgb(243,243,243);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.movie-title{
+ font-size: 30px;
+ font-weight: 500;
+ margin-bottom: 20px;
+}
+
+.seat-stat{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.status{
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+
+}
+
+.seatin{
+  font-size: 15px;
+  position: relative;
+}
+
+.seatin::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translate(0, -50%);
+  width: 10px;
+  height: 10px;
+  background: rgb(255, 255, 255);
+  outline: 1px solid rgb(120, 120, 120);
+  border-radius: 2px;
+}
+
+.seatin:nth-child(2)::before{
+  background: rgb(180, 180, 180);
+  outline: none;
+}
+
+.seatin:nth-child(3)::before{
+  background: #47a3ff;
+  outline: none;
+} 
+
+.avail-seats{
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  grid-gap: 15px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.seat {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 2px;
+  outline: 1px solid rgb(180, 180, 180);
+  cursor: pointer;
+}
+
+.avail-seats input:checked+label{
+  background: #47a3ff;
+  outline: none;
+}
+
+.seat.booked{
+  background: rgb(180, 180, 180);
+  outline: none;
+}
+
+input {
+  display: none;
+}
+
+.seat-stat::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 300px;
+  height: 7px;
+  background: rgb(141, 198, 255);
+  border-radius: 0 0 3px 3px;
+  border-top: 1px solid rgb(180, 180, 180);
+}

@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif, arial;
+  box-sizing: border-box;
+}
+
+body{
+  background: red;
+}
+
+.nav-op{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.nav-op a{
+  
+  color: black;
+  text-decoration: none;
+}
+
+.name{
+  margin: 30px;
+  text-align: center;
+  color: yellow;
+  font-size: 40px;
+}
+
+.new-con{
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.new{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
