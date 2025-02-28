@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-.seats{ 
+.main{ 
   height: 100vh;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@
   background: linear-gradient(to right, red, yellow) ;
 }
 
-.booking-mo{
+.tickets{
   width: 550px;
   height: fit-content;
   border-radius: 10px;
@@ -22,7 +22,7 @@
   box-shadow: 0px 25px 25px -12px rgba(0, 0, 0, 0.25);
 }
 
-.movie{
+.ticket-selector{
   background: rgb(243,243,243);
   display: flex;
   align-items: center;
@@ -31,13 +31,13 @@
   border-radius: 10px;
 }
 
-.movie-title{
+.title{
  font-size: 30px;
  font-weight: 500;
- margin-bottom: 20px;
+ margin-bottom: 30px;
 }
 
-.seat-stat{
+.seats{
   width: 100%;
   display: flex;
   align-items: center;
@@ -54,38 +54,39 @@
 
 }
 
-.seatin{
+.item{
   font-size: 15px;
   position: relative;
 }
 
-.seatin::before{
+.item::before{
   content: "";
   position: absolute;
   top: 50%;
   left: -15px;
-  transform: translate(0, -50%);
-  width: 10px;
+  transform: translate(0,-50%);
+  width: 10px;  
   height: 10px;
   background: rgb(255, 255, 255);
   outline: 1px solid rgb(120, 120, 120);
   border-radius: 2px;
 }
 
-.seatin:nth-child(2)::before{
+.item:nth-child(2)::before{
   background: rgb(180, 180, 180);
   outline: none;
 }
 
-.seatin:nth-child(3)::before{
+.item:nth-child(3)::before{
   background: #47a3ff;
   outline: none;
 } 
 
-.avail-seats{
+.all-seats{
   display: grid;
   grid-template-columns: repeat(10,1fr);
   grid-gap: 15px;
+  margin: 60px 0;
   margin-top: 20px;
   position: relative;
 }
@@ -99,7 +100,7 @@
   cursor: pointer;
 }
 
-.avail-seats input:checked+label{
+.all-seats input:checked+label{
   background: #47a3ff;
   outline: none;
 }
@@ -109,11 +110,11 @@
   outline: none;
 }
 
-input {
+input{
   display: none;
 }
 
-.seat-stat::before{
+.seats::before{
   content: "";
   position: absolute;
   bottom: 0;
@@ -124,4 +125,100 @@ input {
   background: rgb(141, 198, 255);
   border-radius: 0 0 3px 3px;
   border-top: 1px solid rgb(180, 180, 180);
+}
+
+.screentext{
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.timing{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.dates{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dates-item{
+  width: 50px;
+  height: 50px;
+  background: rgb(233, 233, 233);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.day{
+  font-size: 12px;
+}
+
+.times{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.time{
+  font-size: 14px;
+  width: fit-content;
+  padding: 7px 14px;
+  background: rgb(233, 233, 233);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.timing input:checked+label{
+  background: #47a3ff;
+  color: white;
+}
+
+.price{
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.total div{
+  display: flex;
+  gap: 4px;
+}
+
+.total span{
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.price button{
+  background: rgb(60, 60, 60);
+  color: white;
+  font-size: 14px;
+  padding: 7px 14px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }

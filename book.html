@@ -7,29 +7,67 @@
   <link rel="stylesheet" href="books.css">
 </head>
 <body>
-  <section class="seats">
-    <div class="booking-mo">
-    <div class="movie">
-    <div class="movie-ticket">
-      <div class="movie-title">
-    <h1>Name Of Movie</h1>
-  </div>
-  <div class="seat-stat">
-    <div class="status">
-      <div class="seatin">Available</div>
-      <div class="seatin">Reserved</div>
-      <div class="seatin">Selected</div>
+
+
+  <div class="main">
+    <div class="tickets">
+    <div class="ticket-selector">
+    <div class="title"> 
+      12th Fail
     </div>
-    <div class="avail-seats">
+
+  <div class="seats">
+    <div class="status">
+      <div class="item">Available</div>
+      <div class="item">Reserved</div>
+      <div class="item">Selected</div>
+    </div>
+    <div class="all-seats">
       <input type="checkbox" name="tickets" id="s1">
       <label for="s1" class="seat booked"></label>
     </div>
   </div>
+  <div class="screentext"> All Eyes Here
+  </div>
+  <div class="timing">
+    <div class="dates">
+      <input type="radio" name="date" id="d1" checked>
+      <label for="d1" class="dates-item">
+        <div class="day">Fri</div>
+        <div class="date">12</div>
+      </label>
+      <input type="radio" name="date" id="d2">
+      <label for="d2" class="dates-item">
+        <div class="day">Sat</div>
+        <div class="date">13</div>
+      </label>
+      <input type="radio" name="date" id="d3">
+      <label for="d3" class="dates-item">
+        <div class="day">Sun</div>
+        <div class="date">14</div>
+      </label>
+    </div>
+    <div class="times">
+      <input type="radio" name="time" id="t1" checked>
+      <label for="t1" class="time">11:00</label>
+      <input type="radio" name="time" id="t2">
+      <label for="t2" class="time">12:00</label>
+      <input type="radio" name="time" id="t3">
+      <label for="t3" class="time">13:00</label>
+    </div>
+  </div>
+  </div>
+  <div class="price">
+    <div class="total">
+      <span><span class="count">0</span> Tickets </span>
+      <div>Rs. <div class="amount">0</div></div>
+    </div>
+    <button type="button">Book</button>
+  </div>
   
   </div>
   </div>
-  </div>
-  </section>
+</div>
 
 <script src="res.js"></script>
 </body> 
