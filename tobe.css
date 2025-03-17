@@ -21,10 +21,10 @@ body{
 }
 
 .name{
-  margin: 25px;
+  margin: 20px;
   text-align: center;
   color: yellow;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .slide{
@@ -46,7 +46,7 @@ body{
 
 .frame{
   width: 1100px;
-  height: 400px;
+  height: 500px;
   box-shadow: -1px 1px 10px 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
